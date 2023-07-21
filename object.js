@@ -32,6 +32,9 @@ const  sports = [
         "name": "Ըմբշամարտ"
     },{
         "sport": "./nkarner/baskebol.jpeg",
-        "name": "Բասկեբո"
+        "name": "Բասկեբոլ"
+    },{
+        "sport": "./nkarner/taekwando.jpeg",
+        "name": "Տաեկվանդո"
     }
 ]

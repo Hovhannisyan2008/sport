@@ -1,3 +1,4 @@
+let correct;
 let seconds = 60;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
@@ -6,13 +7,28 @@ function getElement(id) {
     return document.getElementById(id);
 }
 
-function getRandomsport() {
-    return sports[Math.floor(Math.random(sports.length - 1) * 10)]
+function getRandomSport() {
+    return sports[Math.floor(Math.random()*(sports.length - 1))];
 }
 
 function main() {
-    spor = getRandomsport();
-    getElement("sport").src = spor.sport;
+
+    let options = [];
+    const maxOptions = 3;
+    while (options.length < maxOptions) {
+        let coun = getRandomSport();
+        if (options.indexOf(coun) === -1) {
+            options.push(coun);
+        }
+    }
+
+    for (let i = 0; i < options.length; i++) {
+        getElement(`option${i + 1}lable`).innerHTML = options[i].name;
+        getElement(`option${i + 1}input`).value = options[i].name;
+        getElement(`option${i + 1}input`).chacked = false;
+    }
+    correct = options[Math.round(Math.random() * (options.length - 1))]
+    getElement("sport").src = correct.sport;
 }
 
 function timer() {
@@ -20,7 +36,6 @@ function timer() {
     getElement("time").innerHTML = seconds;
     getElement("time").style.color = "#80FF00"
     let countdown = setInterval(function () {
-        main();
         seconds--;
         getElement("time").textContent = seconds;
         if (seconds <= 0) {
@@ -53,18 +68,29 @@ function check() {
     else {
         incorrectAnswer++;
     }
-    clearInterval(checkInterval);
+    main();
 }
 function finish() {
     clearInterval(checkInterval);
-    let percentage = (correctAnswer / (correctAnswer + incorrectAnswer)) * 100;
-    getElement("alertaccuracy").innerHTML = ` ${percentage}%`;
+    let percentage = Math.round(correctAnswer / (correctAnswer + incorrectAnswer)) * 100;
+    if (isNaN(percentage)) {
+        resultForAnswers = 100;
+    } else {
+        if (percentage >= 75 && percentage < 95) {
+            resultForAnswers = "duq cucaberel eq lav ardyunq"
+        } else if (percentage >= 95) {
+            resultForAnswers = "duq cucaberel eq gerazanc ardyunq"
+        }
+    }
+    getElement("alertaccuracy").innerHTML = ` ${resultForAnswers}%`;
 }
+
 let checkInterval = setInterval(check, 50);
-
-
-
-
-
-
+main()
 timer();
+
+
+
+
+
+
