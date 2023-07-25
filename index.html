@@ -14,9 +14,7 @@
 
 <body>
     <section class="card" id="card">
-        <section class="infobar">
-            <div style="width: 7%" class="score">ճշգրտություն: <span id="alertaccuracy"></span></div>
-        </section>
+      
         <section class="infobar">
             <div class="score">Միավոր: <span id="score">0</span></div>
             <div class="time" id="time">60</div>
@@ -29,24 +27,28 @@
             <section class="section" id="optinohalf">
                 <div class="options">
                     <div class="option">
-                        <input type="radio" value="Կառատե" name="option" id="option1input" class="optionradio">
-                        <lable for="option1input" class="lable " id="option1lable">Կառատե</lable>
+                        <input type="radio" value="" name="option" id="option1input" class="optionradio">
+                        <label for="option1input" class="label" id="option1label"></label>
                     </div>
-
                     <div class="option">
-                        <input type="radio" value="Ըմբշամարտ" name="option" id="option2input" class="optionradio">
-                        <lable for="option2input" class="lable " id="option2lable">Ըմբշամարտ</lable>
+                        <input type="radio" value="" name="option" id="option2input" class="optionradio">
+                        <label for="option2input" class="label" id="option2label"></label>
                     </div>
-
                     <div class="option">
-                        <input type="radio" value="Թենիս" name="option" id="option3input" class="optionradio">
-                        <lable for="option3input" class="lable " id="option3lable">Թենիս</lable>
+                        <input type="radio" value="" name="option" id="option3input" class="optionradio">
+                        <label for="option3input" class="label" id="option3label"></label>
                     </div>
 
                 </div>
             </section>
         </div>
     </section>
+<section id="alert" class="card">
+    <div class="alerttext">Միավոր: <span id="alertscore"></span></div>
+    <div class="alerttext">Ճշգրտություն: <span id="alertaccuracy"></span></div>
+    <br>
+    <button onclick="refresh()" class="button">Վերսկսել</button>
+</section>
 
     <script src="object.js"></script>
 

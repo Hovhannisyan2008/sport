@@ -31,10 +31,28 @@ const  sports = [
         "sport": "./nkarner/@mbshamart.jpeg",
         "name": "Ըմբշամարտ"
     },{
-        "sport": "./nkarner/baskebol.jpeg",
-        "name": "Բասկեբոլ"
+        "sport": "./nkarner/basketbol-1.jpeg",
+        "name": "Բասկետբոլ"
     },{
         "sport": "./nkarner/taekwando.jpeg",
         "name": "Տաեկվանդո"
+    },{
+        "sport": "./nkarner/armrestling.jpeg",
+        "name": "Արմրեստլինգ"
+    },{
+        "sport": "./nkarner/golf.jpeg",
+        "name": "Գոլֆ"
+    },{
+        "sport": "./nkarner/sambo.jpeg",
+        "name": "Սամբո",
+    },{
+        "sport": "./nkarner/MMA.jpeg",
+        "name": "ՄՄԱ",
+    },{
+        "sport": "./nkarner/logh.jpeg",
+        "name": "Լող",
+    },{
+        "sport": "./nkarner/vazq.jpeg",
+        "name": "Վազք",
     }
 ]

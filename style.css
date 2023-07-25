@@ -144,3 +144,12 @@ h1{
 .button:hover {
     background-color: rgb(46, 150, 74);
 }
+
+.box{
+    width: 30%;
+    margin-left: -100px;
+    margin-right: 154px;
+    margin-top: 65px;
+    height: 200px;
+    border: 1px dashed #38c3f5;
+} 
