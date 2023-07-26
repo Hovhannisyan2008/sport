@@ -54,5 +54,8 @@ const  sports = [
     },{
         "sport": "./nkarner/vazq.jpeg",
         "name": "Վազք",
+    },{
+        "sport": "./nkarner/dahukavazq.jpeg",
+        "name": "Դահուկավազք"
     }
 ]
